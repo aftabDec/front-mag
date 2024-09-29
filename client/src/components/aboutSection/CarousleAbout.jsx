@@ -6,24 +6,24 @@ const CarousleAbout = () => {
   const slides = [
     {
       id: 1,
-      content: 'Sophia - Blog writer',
+      content: 'nischay the founder and eic',
       image: cat,
       description:
-        'Sophia is a passionate creative writer from Minnesota, USA.',
+        'Nischay is a multifaceted artist a writer poet, dassical dancer, violinist, and Carnatic music singer. She works in numerous different majazines; she is the founder and editor in chief of Darpan Literary Magazine. Nischay plans to study at Delhi University, with ambitions to further her education in Arts at Berkeley, Psychology at Yale, and Law at Harvard.',
     },
     {
       id: 2,
       content: 'Lucky Tiwari - Chief Advisor/Co-Founder',
       image: fcat,
       description:
-        'Lucky Tiwari is a graduate from RTMN University and loves tea and mythology.',
+        'Lucky Tiwari, a graduate from RTMN University, Maharashtra, Nagpur. She is currently either singing, volunteering or brewing some of the best tea you have ever tasted. She has an eye for the good old Bollywood tracks, mythlogy and adores watching our all time favourite F.R.I. E.N.D.S. The way to her heart is a chai date, a tulip bouquet and a kitty cat.',
     },
     {
       id: 3,
-      content: 'Kitchen Team - Designer',
+      content: 'jordan the pr manager',
       image: kitchen,
       description:
-        'A short description about the team member’s contributions to design.',
+        'my name is jordan (aka euterpe), and i am from the united states! music wise, i love taylor swift, conan gray, olivia rodrigo, and sabrina carpenter. activity wise, i love reading and watching youtube documentaries (my favorites are dangelo wallace and filmcooper!). currently, i am reading persuasion by jane austen, but my favorite book series has to be a good girls guide to murder. however, the thing that i love the most has to be cats because look at how fluffy they areeeeeeeeeeee. anywho, i am so glad to be apart of this team, and i am so excited to watch us grow ❤',
     },
   ]
 
@@ -61,10 +61,10 @@ const CarousleAbout = () => {
 
               {/* Content on the Right Side */}
               <div className="w-1/2 flex flex-col justify-center p-8">
-                <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">
+                <h2 className="font-montserrat text-3xl font-bold text-gray-800 dark:text-white mb-4">
                   {slide.content}
                 </h2>
-                <p className="text-lg text-gray-600 dark:text-gray-300">
+                <p className="font-forum text-lg text-gray-600 dark:text-gray-300">
                   {slide.description}
                 </p>
               </div>

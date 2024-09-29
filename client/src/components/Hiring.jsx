@@ -6,13 +6,14 @@ const Hiring = () => {
     <>
       {' '}
       <div className=" p-10 space-y-2 w-full flex flex-col items-center text-center">
-        <h1 className="text-2xl font-medium text-pretty ">We are Hiring!</h1>
-        <p className="text-gray-400 text-md">
-          Not vibing with any Characters? Create one of your own! Customize
-          their voice, conversation starters, tone, and more!
+        <h1 className="font-montserrat text-2xl font-medium text-pretty ">We are Hiring!</h1>
+        <p className="font-forum text-md">
+          Join Darpan Literary Magazine and help empower young writers by
+          contributing your skills in writing, editing, or design to our
+          creative platform.
         </p>
         <Link to="/character/new">
-          <button className="text-white text-lg py-2 px-4 rounded-full bg-primary hover:bg-primary/90 transition-all">
+          <button className=" text-white text-lg py-2 px-4 rounded-full bg-custom-brown hover:bg-custom-brown/90 transition-all">
             Create Character
           </button>
         </Link>

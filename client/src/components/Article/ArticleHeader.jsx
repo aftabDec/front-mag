@@ -15,7 +15,7 @@ const ArticleHeader = ({ shrink, onToggleDrawer }) => {
 
   return (
     <header
-      className={`bg-base-200 shadow-md text-base-content transition-all duration-300 ease-out ${
+      className={` border-black border-t-2 border-b-2  shadow-md text-base-content transition-all duration-300 ease-out ${
         shrink ? 'h-16 py-2 text-sm' : 'h-20 py-5 text-lg'
       } h-12 sm:h-16`} // Adjust height for mobile (h-12) and small screens (h-16)
     >
@@ -23,14 +23,14 @@ const ArticleHeader = ({ shrink, onToggleDrawer }) => {
         {/* More Options on the left */}
         <div className="flex items-center">
           <div className="hidden md:flex">
-            <div
+            <button
               onClick={onToggleDrawer}
-              className={`${
+              className={`font-montserrat bg-custom-brown text-white text-sm rounded-md p-2 ${
                 shrink ? 'text-lg' : 'text-2xl'
               } transition-all duration-300 mx-3 cursor-pointer`}
             >
               More Options
-            </div>
+            </button>
           </div>
 
           {/* Icons for mobile view */}
@@ -56,7 +56,7 @@ const ArticleHeader = ({ shrink, onToggleDrawer }) => {
             {messages.map((message, index) => (
               <div
                 key={index}
-                className="text-sm sm:text-lg font-semibold h-6 flex items-center justify-center" // Adjusted text size
+                className="font-forum text-sm sm:text-lg font-semibold h-6 flex items-center justify-center" // Adjusted text size
                 style={{ height: '30px' }} // Each item should have a consistent height
               >
                 {message}
@@ -68,13 +68,14 @@ const ArticleHeader = ({ shrink, onToggleDrawer }) => {
         {/* Subscribe on the right */}
         <div className="flex items-center">
           <div className="hidden md:flex">
-            <div
-              className={`${
+            <button
+              onClick={onToggleDrawer}
+              className={`font-montserrat bg-custom-brown text-white text-sm rounded-md p-2 ${
                 shrink ? 'text-lg' : 'text-2xl'
               } transition-all duration-300 mx-3 cursor-pointer`}
             >
               Subscribe
-            </div>
+            </button>
           </div>
 
           {/* Icons for mobile view */}

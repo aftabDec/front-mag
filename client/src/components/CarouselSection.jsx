@@ -57,7 +57,7 @@ const CarouselSection = () => {
   }, [])
 
   return (
-    <div className="relative mx-5 shadow overflow-hidden">
+    <div className="mt-10 relative mx-5 shadow overflow-hidden">
       {/* Carousel Images */}
       <div
         className="relative  flex transition-transform duration-700 ease-in-out"

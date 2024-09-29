@@ -11,7 +11,7 @@ const Header = ({ shrink }) => {
       <Dark />
       {/* Darpan Text with Letter Spacing */}
       <div
-        className={`text-center font-seasons transition-all duration-300 ease-out ${
+        className={` font-great-vibes space-x-5 font-bold text-center font-seasons transition-all duration-300 ease-out ${
           shrink ? 'text-3xl' : 'text-5xl'
         } flex justify-center`}
       >

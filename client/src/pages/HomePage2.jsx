@@ -1,7 +1,7 @@
 import React from 'react'
 import CarouselSection from '../components/CarouselSection'
 import Issues2 from '../testcodes/issues2/issues2'
-import MiniIssue2 from '../testcodes/issues2/MiniIssue2'
+import MiniIssue2 from '../testcodes/issues2/seasonalIssue2'
 import Hiring from '../components/Hiring'
 
 const HomePage2 = () => {

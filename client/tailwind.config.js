@@ -3,7 +3,17 @@ module.exports = {
     "./src/**/*.{html,js,jsx,ts,tsx}", // Update this path to match your project structure
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "custom-brown": "#8B3B00",
+        "light-cream": "#FFF3E2",
+      },
+      fontFamily: {
+        "great-vibes": ["Great Vibes", "cursive"],
+        montserrat: ["Montserrat", "sans-serif"],
+        forum: ["Forum", "sans-serif"],
+      },
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {

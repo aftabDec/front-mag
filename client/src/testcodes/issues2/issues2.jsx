@@ -9,14 +9,12 @@ const Issues2 = () => {
       </div>
       {/*content here*/}
       <div className="space-y-5">
-        <h2 className="font-bold text-3xl uppercase ">
-          Title about the issues
-        </h2>
-        <p className="text-ellipsis overflow-hidden line-clamp-5 w-80">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam
-          delectus ratione deleniti perspiciatis cumque hic numquam officiis,
-          excepturi corporis magni eaque aliquam distinctio architecto quis
-          exercitationem sunt, mollitia facilis maiores.
+        <h2 className="font-montserrat font-bold text-3xl uppercase ">monthly-Issues</h2>
+        <p className="font-forum text-ellipsis overflow-hidden line-clamp-5 w-80">
+          The Monthly Issue of Darpan Literary Magazine is a collection
+          of creative works submitted by young writers. It features poetry,
+          short stories, essays, and more, providing a platform for teens to
+          share their voices with a wider audience.
         </p>
       </div>
     </div>

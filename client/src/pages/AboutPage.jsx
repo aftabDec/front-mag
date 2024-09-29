@@ -55,7 +55,7 @@ const About = () => {
   ]
 
   return (
-    <div className="container bg-base-200 w-full my-8 mx-auto px-4">
+    <div className="container  w-full my-8 mx-auto px-4">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 auto-rows-min">
         {/* Darpan Section */}
         <div className="md:col-span-12 lg:col-span-12 row-span-3">
