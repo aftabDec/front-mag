@@ -19,11 +19,11 @@ const Drawer = ({ isOpen, onClose }) => {
       }`}
     >
       <div
-        className={`bg-base-100 mt-40 h-full p-5 transition-transform duration-300 transform ${
+        className={`bg-base-100 mt-28 h-full p-5 transition-transform duration-300 transform ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <ul className="mt-4 cursor-pointer">
+        <ul className="mt-4 mx-10 cursor-pointer">
           <li
             className="text-drawer-style py-2"
             onClick={() => handleNavigation('/')}
@@ -71,6 +71,12 @@ const Drawer = ({ isOpen, onClose }) => {
             onClick={() => handleNavigation('/magazine')}
           >
             Magazine
+          </li>
+          <li
+            className="text-drawer-style py-2"
+            onClick={() => handleNavigation('/magazine')}
+          >
+            Career
           </li>
         </ul>
       </div>

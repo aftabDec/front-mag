@@ -39,6 +39,18 @@ const ArticleNav = () => {
             onClick={() => handleNavigation('/')}
             className="cursor-pointer hover:text-primary"
           >
+            Dear beloved
+          </li>
+          <li
+            onClick={() => handleNavigation('/')}
+            className="cursor-pointer hover:text-primary"
+          >
+            pensword
+          </li>
+          <li
+            onClick={() => handleNavigation('/')}
+            className="cursor-pointer hover:text-primary"
+          >
             Submissions
           </li>
           <li

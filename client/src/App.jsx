@@ -7,12 +7,26 @@ import Drawer from './components/Drawer'
 import AboutPage from './pages/AboutPage'
 import Footer from './components/Article/ArticleFooter'
 import ArticleNav from './components/Article/ArticleNav'
+import HomePage2 from './pages/HomePage2'
+
 const App = () => {
   const [scrollY, setScrollY] = useState(0)
   const [shrinkHeader, setShrinkHeader] = useState(false)
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
-  const [showNavbar, setShowNavbar] = useState(true) // Track navbar visibility
-  const [prevScrollY, setPrevScrollY] = useState(0)
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 700)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(document.documentElement.clientWidth <= 700)
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    // Clean up the event listener on unmount
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,7 +49,6 @@ const App = () => {
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen)
     setShrinkHeader(!isDrawerOpen)
-
     // Toggle no-scroll class on body
     if (!isDrawerOpen) {
       document.body.classList.add('no-scroll')
@@ -47,21 +60,18 @@ const App = () => {
   return (
     <Router>
       <div className="sticky top-0 z-20 bg-base-100 transition-all duration-500 ease-out">
-        {/* Header and ArticleHeader get the shrink and drawer toggle props */}
         <Header shrink={shrinkHeader} />
         <ArticleHeader shrink={shrinkHeader} onToggleDrawer={toggleDrawer} />
       </div>
-      <ArticleNav />
-      {/* Drawer Component */}
 
+      {/* Conditionally render ArticleNav based on screen size */}
+      {!isMobile && <ArticleNav />}
+
+      {/* Drawer Component */}
       {isDrawerOpen && <Drawer isOpen={isDrawerOpen} onClose={toggleDrawer} />}
       <Routes>
         <Route path="/about" element={<AboutPage />} />
-        {/* Add more routes as needed */}
-      </Routes>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        {/* Add more routes as needed */}
+        <Route path="/" element={<HomePage2 />} />
       </Routes>
       <Footer />
     </Router>

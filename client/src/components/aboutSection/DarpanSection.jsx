@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import image1 from '../../assets/logos/chosen2.png' // Local image
 
 const DarpanSection = () => {
+  const [showMore, setShowMore] = useState(false)
+
+  // Toggle between showing the full content and clamped text
+  const toggleShowMore = () => {
+    setShowMore(!showMore)
+  }
+
   return (
     <div className="bg-base-100 p-6 justify-center rounded-lg my-8 flex flex-col md:flex-row-reverse items-center">
       {/* Image Section */}
@@ -17,7 +24,9 @@ const DarpanSection = () => {
       {/* Text Section */}
       <div className="flex flex-col text-left md:ml-5 md:mr-8 md:w-1/2">
         <h2 className="text-3xl font-bold">About Darpan</h2>
-        <p className="text-base overflow-hidden line-clamp-8 text-ellipsis w-full md:w-auto mt-4">
+        <p
+          className={`text-base w-full mt-4 ${showMore ? '' : 'line-clamp-4'}`}
+        >
           Darpan Literary Magazine is a creative platform dedicated to young
           writers, especially teens, who may not have the resources to publish
           their work on larger platforms. We believe in giving a voice to the
@@ -31,6 +40,13 @@ const DarpanSection = () => {
           community of like-minded individuals. Join us and let your writing be
           heard!
         </p>
+        {/* Show more / Show less button */}
+        <button
+          className="mt-4 btn btn-sm btn-outline"
+          onClick={toggleShowMore}
+        >
+          {showMore ? 'Show Less' : 'Read More'}
+        </button>
       </div>
     </div>
   )
